@@ -4,7 +4,7 @@ part 'character_model.freezed.dart';
 part 'character_model.g.dart';
 
 @freezed
-class CharacterResponse with _$CharacterResponse {
+abstract class CharacterResponse with _$CharacterResponse {
   const factory CharacterResponse({
     required Info info,
     required List<Character> results,
@@ -15,7 +15,7 @@ class CharacterResponse with _$CharacterResponse {
 }
 
 @freezed
-class Info with _$Info {
+abstract class Info with _$Info {
   const factory Info({
     required int count,
     required int pages,
@@ -27,7 +27,7 @@ class Info with _$Info {
 }
 
 @freezed
-class Character with _$Character {
+abstract class Character with _$Character {
   const factory Character({
     required int id,
     required String name,
@@ -48,7 +48,7 @@ class Character with _$Character {
 }
 
 @freezed
-class LocationOrigin with _$LocationOrigin {
+abstract class LocationOrigin with _$LocationOrigin {
   const factory LocationOrigin({
     required String name,
     required String url,

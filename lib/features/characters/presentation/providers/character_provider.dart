@@ -16,10 +16,10 @@ class SearchQuery extends _$SearchQuery {
 }
 
 @riverpod
-Future<List<Character>> characters(CharactersRef ref) async {
+Future<List<Character>> characters(Ref ref) async {
   final query = ref.watch(searchQueryProvider);
   final repository = ref.watch(characterRepositoryProvider);
-  
+
   try {
     final response = await repository.getCharacters(
       name: query.isEmpty ? null : query,
@@ -27,8 +27,6 @@ Future<List<Character>> characters(CharactersRef ref) async {
     );
     return response.results;
   } catch (e) {
-    // The API returns a 404 when no characters are found matching the search.
-    // In that case, we should just return an empty list rather than throwing an error.
     return [];
   }
 }

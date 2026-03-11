@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../../core/network/dio_provider.dart';
@@ -7,7 +8,7 @@ import '../models/character_model.dart';
 part 'character_repository.g.dart';
 
 @riverpod
-CharacterRepository characterRepository(CharacterRepositoryRef ref) {
+CharacterRepository characterRepository(Ref ref) {
   final dio = ref.watch(dioProvider);
   final api = CharacterApi(dio);
   return CharacterRepository(api);

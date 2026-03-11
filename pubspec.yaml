@@ -44,11 +44,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: any
-  riverpod_generator: any
-  retrofit_generator: any
-  freezed: any
-  json_serializable: any
+  build_runner: ^2.4.8
+  riverpod_generator: ^4.0.3
+  retrofit_generator: ^10.2.1
+  freezed: ^3.2.5
+  json_serializable: ^6.13.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

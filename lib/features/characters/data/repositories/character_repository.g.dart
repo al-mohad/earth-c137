@@ -55,4 +55,4 @@ final class CharacterRepositoryProvider
 }
 
 String _$characterRepositoryHash() =>
-    r'b2c4779684bee6a13dfea203ca0a0a099a4037e4';
+    r'62bbbccf7fce39e950083171ec07e3238a631e15';

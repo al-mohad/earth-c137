@@ -97,4 +97,4 @@ final class CharactersProvider
   }
 }
 
-String _$charactersHash() => r'7be26ca4a49e03ed4ef945c2644e1cf31a72890f';
+String _$charactersHash() => r'd015335872261121a686c0dceb633bbc3caa0829';
