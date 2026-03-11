@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/characters/presentation/screens/character_list_screen.dart';
+import 'core/router/app_router.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(appRouterProvider);
+    return MaterialApp.router(
       title: 'Rick and Morty Explorer',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       themeMode: ThemeMode.system,
-      home: const CharacterListScreen(),
+      routerConfig: router,
     );
   }
 }

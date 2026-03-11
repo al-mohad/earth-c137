@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../data/models/character_model.dart';
-import '../screens/character_detail_screen.dart';
 
 class CharacterCard extends StatelessWidget {
   final Character character;
@@ -17,12 +17,7 @@ class CharacterCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CharacterDetailScreen(character: character),
-            ),
-          );
+          context.push('/character', extra: character);
         },
         child: IntrinsicHeight(
           child: Row(
