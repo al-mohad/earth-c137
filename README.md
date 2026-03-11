@@ -56,3 +56,4 @@ We follow a feature-based architecture pattern for clear separation of concerns 
 - `lib/core/`: Application-wide configurations, such as the base network provider (Dio instance setup).
 - `lib/features/characters/data/`: Houses the Freezed models, Retrofit API definition, and the `CharacterRepository` layer.
 - `lib/features/characters/presentation/`: Contains UI components, cleanly segmented into screens, widgets, and Riverpod state controllers.
+# earth-c137
